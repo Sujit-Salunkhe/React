@@ -1,8 +1,24 @@
 import React,{ Component } from "react"
-class Welcome extends Component{
-    render(){
-        return <h1> Hello {this.props.name} also know as {this.props.superhero}</h1>
+class Message extends Component{
+    constructor(){
+        super()
+        this.state = {
+            Message:"Welcome Visitor"
+        }
+    }
+    changemessage(){
+        this.setState({
+            Message:"Thankyou For subscribing"
+        })
+    }
 
+    render(){
+        return ( 
+        <div>
+        <h1>{this.state.Message}</h1>
+        <button onClick={() => this.changemessage()}>Subsribe</button>
+        </div>
+        )
     }
 }
-export default Welcome
+export default Message
