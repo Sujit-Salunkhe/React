@@ -12,13 +12,24 @@ import Usergeeting from './Components/Usergeeting';
 import List from './Components/List';
 import Stylesheet from './Components/Stylesheet';
 import { Component } from 'react';
+// import Form from '.Components/Form'
+import Form from './Components/Form';
+import './appStyles.css'
+import LifecycleA from './Components/LifecycleA';
+import styles from './appStyles.module.css'
 function App() {
   return (
     <div className="App">
+    <LifecycleA />
+    {/* <LifecycleA /> */}
+    {/* <Form /> */}
+    {/* <h1 className='error'>error</h1>
+    <h2 className={styles.success}>success </h2> */}
     {/* <Parentcomponet />/ */}
     {/* <List /> */}
-    <Stylesheet />
+    {/* <Stylesheet primary={true}/> */}
     {/* <Usergeeting /> */}
+
   
     </div>
   );
