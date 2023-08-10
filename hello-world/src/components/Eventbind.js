@@ -7,7 +7,7 @@ class Eventbind extends Component {
       this.state = {
          message:"Hello Moto"
       }
-    //   this.evethandler =this.evethandler.bind(this)
+      this.evethandler =this.evethandler.bind(this)
     }
     // evethandler(){
     //     this.setState({
@@ -23,7 +23,7 @@ class Eventbind extends Component {
     return (
       <div>
         <div>{this.state.message}</div>
-        {/* <button onClick={this.evethandler.bind(this)}>Click me</button> */}
+        <button onClick={this.evethandler.bind(this)}>Click me</button>
         <button onClick={this.evethandler}>Click me</button>
       </div>
     )

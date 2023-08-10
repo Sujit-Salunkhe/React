@@ -17,34 +17,16 @@ import ComponetC from "./ComponetC";
 function App() {
   return (
     <div className="App">
-      {/* <RefsDemo /> */}
-      {/* <Focusinput /> */}
-      {/* <FrparentInput /> */}
-      {/* <PortalsDemo /> */}
-      {/* <Errorboundry>
-      <Hero Heroname="batman"/>
-    </Errorboundry>
-    <Errorboundry>
-      <Hero Heroname="superman"/>
-    </Errorboundry>
-    <Errorboundry>
-      <Hero Heroname="joker"/>
-    </Errorboundry> */}
-      {/* <HigherOC_1 name="Sujit "/>
-    <HigherOChove1/> */}
-      {/* <Render_1/>
-    <Render_1hover />
-    <Render_2 render={(isLoggedin)=> isLoggedin ? "sujit":"guest"}/> */}
-      {/* <Render_2main>
-        {(count, incrementcount) => (
+       <Render_2main>
+       {(count, incrementcount) => (
           <Render_1 count={count} incrementcount={incrementcount} />
-        )}
-      </Render_2main>
-      <Render_2main>
-        {(count, incrementcount) => (
-          <Render_1hover count={count} incrementcount={incrementcount} />
-        )}
-      </Render_2main> */}
+         )}
+       </Render_2main>
+       <Render_2main>
+     {(count, incrementcount) => (
+         <Render_1hover count={count} incrementcount={incrementcount} />
+       )}
+       </Render_2main>  
       <UserProvider value="sujit">
         <ComponetC />
       </UserProvider>
@@ -53,3 +35,4 @@ function App() {
 }
 
 export default App;
+
