@@ -1,11 +1,14 @@
 import './App.css';
-
-import PostList from './componets.js/PostList';
+import Fortyfive from './Hooks/Fortyfive';
+// import PostForm from './componets.js/PostForm';
+// import PostList from './componets.js/PostList';
 
 function App() {
   return (
     <div className="App">
-      <PostList/>
+      {/* <PostList/> */}
+      {/* <PostForm /> */}
+      <Fortyfive/>
     </div>
   );
 }
