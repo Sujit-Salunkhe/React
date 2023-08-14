@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React, { forwardRef } from 'react';
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
+const ChildComponent = forwardRef((props, ref) => {
+  return <input ref={ref} />;
+});
 
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
+// Parent component
+function ParentComponent() {
+  const inputRef = React.createRef();
+
+  const focusInput = () => {
+    inputRef.current.focus();
   };
 
-  render() {
-    return (
-      <div>
-        <p>Count: {this.state.count}</p>
-        <button onClick={this.increment}>Increment</button>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <ChildComponent ref={inputRef} />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
 }
 
-export default Counter;
+
+
 
