@@ -4,9 +4,7 @@ import updatedComponet from './HigherOC_2'
 
 
 class HigherOC_1 extends Component {
-
-    
-  render() {
+render() {
     // const { count } =this.state
     const { count,countHandler} =this.props
     return (

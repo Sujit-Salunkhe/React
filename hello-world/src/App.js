@@ -27,9 +27,9 @@ function App() {
          <Render_1hover count={count} incrementcount={incrementcount} />
        )}
        </Render_2main>  
-      <UserProvider value="sujit">
+      {/* <UserProvider value="sujit">
         <ComponetC />
-      </UserProvider>
+      </UserProvider> */}
     </div>
   );
 }
