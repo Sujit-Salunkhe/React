@@ -5,6 +5,7 @@ import SeventyFour from './Hooks/SeventyFour';
 import SeventyOne from './Hooks/SeventyOne';
 import SeventyTwo from './Hooks/SeventyTwo';
 import SeventyTwofun from './Hooks/SeventyTwofun';
+import UserInput from './Hooks/SiventySix.js/UserInput';
 // import SixtySeven from './Hooks/SixtySeven';
 // import SixtySix from './Hooks/SixtySix';
 import Parent from './Hooks/Sixtynine/Parent'
@@ -18,7 +19,8 @@ return (
     <SeventyTwo/>
     <SeventyTwofun/> */}
     {/* <SeventyFour/> */}
-    <SeventyFive/>
+    {/* <SeventyFive/> */}
+    <UserInput/>
       {/* <Seventy/> */}
     </div>
   );
