@@ -43,4 +43,4 @@ function SixtySeven() {
     </div>
   );
 }
-export default SixtySeven;
+export default SixtySeven; 
