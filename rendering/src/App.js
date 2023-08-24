@@ -17,6 +17,7 @@ function App() {
         <ChildCompont/>
       </Parentcompont> */}
       {/* <Parent/> */}
+      <Imagesslider/>
       {/* <UseStateImmutablitu/> */}
     </div>
   );
