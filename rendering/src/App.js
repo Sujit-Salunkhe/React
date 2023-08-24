@@ -6,7 +6,7 @@ import './App.css';
 // import Arrayex from './Componets/EightyOne/Arrayex';
 // import Parentcompont from './Componets/EightyThree.js/Parentcompont';
 // import Parent from './Projects/Background/Parent';
-// import Imagesslider from './Projects/ImageSlider/Imagesslider';
+import Imagesslider from './Projects/ImageSlider/Imagesslider';
 import QuotePatent from './Projects/QuateGenerator/QuotePatent';
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
         <ChildCompont/>
       </Parentcompont> */}
       {/* <Parent/> */}
-      {/* <Imagesslider/> */}
-      <QuotePatent/>
+      <Imagesslider/>
+      {/* <QuotePatent/> */}
       {/* <UseStateImmutablitu/> */}
     </div>
   );
