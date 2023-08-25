@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import ParentForm from './Projects/Form/ParentForm';
 // import ChildCompont from './Componets/EightyThree.js/ChildCompont';
 // import UserState from './Componets/SeventyNine/UserState';
 // import UseStateImmutablitu from './Componets/EightyOne/UseStateImmutablitu';
@@ -18,7 +19,8 @@ function App() {
         <ChildCompont/>
       </Parentcompont> */}
       {/* <Parent/> */}
-      <Imagesslider/>
+      {/* <Imagesslider/> */}
+      <ParentForm/>
       {/* <QuotePatent/> */}
       {/* <UseStateImmutablitu/> */}
     </div>
