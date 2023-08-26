@@ -22,32 +22,27 @@ const ParentForm = () => {
     };
   }, []);
   const handleChnage = (event) => {
-    UseKeydown(event, inputref, numberref);
+    UseKeydown(event,  numberref);
   };
   const handlechangeTwo = (event) => {
-    UseKeydown(event, numberref, passwordref);
+    UseKeydown(event,  passwordref);
   };
   const handlechangeThree = (event) => {
-    UseKeydown(event, passwordref, confirmpasswordref);
+    UseKeydown(event, confirmpasswordref);
   };
   const handlechangeFour = (event) => {
     if (event.keyCode === 13) {
         event.preventDefault();
     }
   };
-  const Submithandler = () =>{
-    alert("form is submited")
-  }
-
-  return (
+ return (
     <div>
       <ChildForm
         inputref={inputref}
         numberref={numberref}
         passwordref={passwordref}
         confirmpasswordref={confirmpasswordref}
-        Submithandler={Submithandler}
-      />
+        />
     </div>
   );
 };
