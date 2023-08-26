@@ -29,7 +29,6 @@ const ChildForm = ({
   };
   const Submithandler = () => {
     const submissionInfo = JSON.stringify(values);
-    // alert(values.name,values.password.value.number)
     alert(submissionInfo);
   };
 
