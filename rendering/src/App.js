@@ -20,8 +20,9 @@ function App() {
         <ChildCompont/>
       </Parentcompont> */}
       <Parent/>
+
       {/* <Imagesslider/> */}
-      {/* <ParentForm/> */}
+      <ParentForm/>
       {/* <Time/> */}
       {/* <Sujit/> */}
       {/* <QuotePatent/> */}

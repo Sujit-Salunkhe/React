@@ -7,10 +7,10 @@ const Color = ({colorcode, changecolor}) => {
 return (
     <div>
         It's magic
-        Which color do you like a most
-        <div>
+        Fill a form with great experience
+        {/* <div>
         Color Code :-{background}
-        </div>
+        </div> */}
 
     </div>
   )
