@@ -1,4 +1,5 @@
-import React, { useReducer } from "react";
+import React, { useReducer,useEffect } from "react";
+import axios from 'axios'
 import "./Formstyle.css";
 let intialstage = {
   name: "",
@@ -27,8 +28,18 @@ const ChildForm = ({
   const handlechange = (event, type) => {
     dispatch({ type: type, value: event.target.value });
   };
-  const Submithandler = () => {
+  const Submithandler = (event) => {
     const submissionInfo = JSON.stringify(values);
+    event.preventDefault()
+    // console.log(values)
+    axios.post("https://jsonplaceholder.typicode.com/posts",values)
+    .then((Response)=>{
+      console.log(Response)
+    })
+    .catch((err) =>{
+      console.log(err)
+    })
+
     alert(submissionInfo);
   };
 

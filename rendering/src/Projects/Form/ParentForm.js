@@ -36,14 +36,14 @@ const ParentForm = () => {
     }
   };
  return (
-    <div>
+
       <ChildForm
         inputref={inputref}
         numberref={numberref}
         passwordref={passwordref}
         confirmpasswordref={confirmpasswordref}
         />
-    </div>
+    
   );
 };
 

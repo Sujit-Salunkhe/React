@@ -6,7 +6,12 @@ const Color = ({colorcode, changecolor}) => {
     h.style.background=background
 return (
     <div>
-        <button onClick={changecolor}>Click For Color Change</button>
+        It's magic
+        Which color do you like a most
+        <div>
+        Color Code :-{background}
+        </div>
+
     </div>
   )
 }

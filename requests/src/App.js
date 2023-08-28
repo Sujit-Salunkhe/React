@@ -1,4 +1,4 @@
-import UseStateImmutablitu from '../../rendering/src/Componets/EightyOne/useStateImmutablitu';
+// import UseStateImmutablitu from '../../rendering/src/Componets/EightyOne/useStateImmutablitu';
 import './App.css';
 import Seventy from './Hooks/Seventy';
 import SeventyFive from './Hooks/SeventyFive';
@@ -9,6 +9,7 @@ import SeventyTwofun from './Hooks/SeventyTwofun';
 import UserInput from './Hooks/SiventySix.js/UserInput';
 // import SixtySeven from './Hooks/SixtySeven';
 // import SixtySix from './Hooks/SixtySix';
+import PostForm from './componets.js/PostForm'
 import Parent from './Hooks/Sixtynine/Parent'
 
 function App() {
@@ -22,6 +23,7 @@ return (
     {/* <SeventyFour/> */}
     {/* <SeventyFive/> */}
     {/* <UserInput/> */}
+    <PostForm/>
     {/* <UseStateImmutablitu/> */}
       {/* <Seventy/> */}
     </div>
