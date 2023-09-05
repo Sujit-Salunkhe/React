@@ -27,7 +27,7 @@ const Imagesslider = () => {
             (value, index) =>
               currnet === index && (
                 <div key={value} className="slide">
-                  <img src={value} alt="image" className="natures"></img>
+                  <img src={value} alt="image" className="natures"/>
                 </div>
               )
           )}

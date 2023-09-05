@@ -18,7 +18,7 @@ const ParentForm = () => {
       inputref.current.removeEventListener("keydown", handleChnage);
       numberref.current.removeEventListener("keydown", handlechangeTwo);
       passwordref.current.removeEventListener("keydown", handlechangeThree);
-      confirmpasswordref.current.removeEventListener("keydown",handlechangeFour);
+      // confirmpasswordref.current.removeEventListener("keydown",handlechangeFour);
     };
   }, []);
   const handleChnage = (event) => {
