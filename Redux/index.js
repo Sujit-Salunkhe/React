@@ -8,26 +8,54 @@
             info:"First Redux action"
         }
     }
-    const initialState = {
-        noOfCakes :10,
-        Ice_creme:20
+    // const initialState = {
+    //     noOfCakes :10,
+    //     noOfIcecrems:20
+    // }
+    const intialCakeState = {
+        noOfCakes:10
+    }
+    const intialIceCremsState ={
+        noOfIcecrems:20
     }
     function Ice_Creme (){
         return{
             type:BUY_ICECREME
         }
     }
-    const reducer = (state=initialState,action) =>{
+    // const reducer = (state=initialState,action) =>{
+    //     switch(action.type){
+    //         case BUY_CAKE:
+    //             return {
+    //         ...state,
+    //         noOfCakes:state.noOfCakes - 1
+    //         }
+    //         case BUY_ICECREME:
+    //             return {
+    //         ...state,
+    //         noOfIcecrems:state.noOfIcecrems - 1           
+    //         }
+    //         default: return state
+    //     }
+    // }
+    const cakeReducer = (state=intialCakeState,action) =>{
         switch(action.type){
             case BUY_CAKE:
                 return {
             ...state,
             noOfCakes:state.noOfCakes - 1
             }
+            
+            default: return state
+        }
+    }
+    
+    const iceCremeReducer = (state=intialIceCremsState,action) =>{
+        switch(action.type){
             case BUY_ICECREME:
                 return {
             ...state,
-            Ice_creme:state.Ice_creme - 1           
+            noOfIcecrems:state.noOfIcecrems - 1           
             }
             default: return state
         }
