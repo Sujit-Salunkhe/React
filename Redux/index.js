@@ -1,5 +1,9 @@
-    const redux=require('redux');
+const redux=require('redux');
+const reduxLogger=require('redux-logger')
     const createStore = redux.createStore
+    const combineReducers=redux.combineReducers
+    const logger=reduxLogger.createLogger()
+    const applyMiddleWare=redux.applyMiddleware
     const BUY_CAKE="BUY_CAKE"
     const BUY_ICECREME="BUY_ICECREME"
     function Buy_cake () {
@@ -60,9 +64,13 @@
             default: return state
         }
     }
-    const store = createStore(reducer);
+    const rootReducer=combineReducers({
+        cake:cakeReducer,
+        Icecrem:iceCremeReducer
+    })
+    const store = createStore(rootReducer,applyMiddleWare(logger));
     console.log('initialState',store.getState())
-    const unsubscribe = store.subscribe(()=>console.log("updated State",store.getState()))
+    const unsubscribe = store.subscribe(()=>{})
     store.dispatch(Buy_cake())
     store.dispatch(Buy_cake())
     store.dispatch(Buy_cake())
