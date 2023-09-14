@@ -10,7 +10,7 @@ function CakeContainer(props) {
     </div>
   )
 }
-const mapStateToProps =state =>{
+const mapStateToProps = state =>{
     return {
         numOfCake:state.numOfCake
     }
