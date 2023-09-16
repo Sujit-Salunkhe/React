@@ -6,13 +6,13 @@ function IceCremeContainer(props) {
   return (
     <div>
       <h2>Number of iceCremes - {props.numOfIceCrems}</h2>
-      <button onClick={props.buy_IceCremes}>Buy IceCreme</button>
+      <button onClick={props.buy_IceCreme}>Buy IceCreme</button>
     </div>
   )
 }
 const mapStateToProps = state =>{
     return {
-        numOfIceCrems:state.iceCreme.noOfIceCrems
+        numOfIceCrems:state.iceCreme.numOfIceCrems
     }
 }
 const mapDispatchToProps = dispatch => {
