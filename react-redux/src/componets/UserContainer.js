@@ -8,7 +8,18 @@ function UserContainer({userData,fetchUsers }) {
     },[])
   return (
     <div>
-      userData.loading ?
+      userData.loading ? (
+        <h2>Loading</h2>
+      ):userDate.error ? (
+        <h2>userData.error</h2>
+      ):(
+        <div>User List</div>
+        <div>
+            {
+                userData &&userData.users && userData.users.map(user =><p>{user.name}</p>)
+            }
+        </div>
+      )
     </div>
   )
 }
