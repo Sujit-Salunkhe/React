@@ -7,20 +7,21 @@ function UserContainer({userData,fetchUsers }) {
         fetchUsers()
     },[])
   return (
-    <div>
-      userData.loading ? (
+    userData.loading ? (
         <h2>Loading</h2>
-      ):userDate.error ? (
-        <h2>userData.error</h2>
+      ):userData.error ? (
+        <h2>{userData.error}</h2>
       ):(
-        <div>User List</div>
+        <div>
+        <h2>User List</h2>
         <div>
             {
-                userData &&userData.users && userData.users.map(user =><p>{user.name}</p>)
+                userData && userData.users && userData.users.map(user =><p>{user.name}</p>)
             }
         </div>
+        </div>
       )
-    </div>
+    
   )
 }
 const mapStateToProps= state =>{
