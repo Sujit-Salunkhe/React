@@ -11,6 +11,7 @@ import UserInput from './Hooks/SiventySix.js/UserInput';
 // import SixtySix from './Hooks/SixtySix';
 import PostForm from './componets.js/PostForm'
 import Parent from './Hooks/Sixtynine/Parent'
+import FortyEight from './Hooks/FortyEight';
 
 function App() {
 return (
@@ -22,8 +23,9 @@ return (
     <SeventyTwofun/> */}
     {/* <SeventyFour/> */}
     {/* <SeventyFive/> */}
+    <FortyEight/>
     {/* <UserInput/> */}
-    <PostForm/>
+    {/* <PostForm/> */}
     {/* <UseStateImmutablitu/> */}
       {/* <Seventy/> */}
     </div>
