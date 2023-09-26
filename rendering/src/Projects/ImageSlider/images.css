@@ -1,0 +1,19 @@
+.Container{
+    display: flex;
+    justify-content: center;
+}
+.main{
+height: 70vh;
+width: 70vw;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.natures {
+height: 50vh;
+width:50vw;
+}
+.left-arrow,.right-arrow{
+    font-size: 100px;
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+body{
+    background-color: cyan;
+}
+.Maincontainer{
+    height: 100vh;
+    width: 100vw;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 50vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    background-color: white;
+}
+.author{
+    font-size: medium;
+    font-style: italic;
+    color: blue;
+}
+.heading{
+    font-size: 100px;
+    color: pink;
+}
