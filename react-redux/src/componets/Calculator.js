@@ -2,11 +2,17 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons";
 import {useDispatch ,useSelector } from 'react-redux'
 import { Load_Ans, Load_Backpace, Load_Button, Load_Clear } from "../redux/calculator/calculatorActions";
+import { CALCULATOR_KEY } from "../redux/calculator/calculatorReducer";
 
 function Calculator() {
   const dispatch = useDispatch()
+  // view calculator
+  const viewCalculator = useSelector((state)=>{
+    return state[CALCULATOR_KEY]
+  })
   return (
     <>
+    <pre>{JSON.stringify(viewCalculator)}</pre>
       <section>
         <div className="bg-gray-900 w-96 h-screen mx-auto rounded-lg overflow-hidden mt-10"></div>
         <div className="text-gray-200 w-full font-bold text-3xl h-16 flex items-centre space-x-2 pl-2">
@@ -18,6 +24,7 @@ function Calculator() {
           <input
             type="text"
             placeholder="0"
+            value={(viewCalculator.ans).length === 0 ? viewCalculator.number : viewCalculator.ans} 
             className="w-full h-full border border-white bg-gray-900 text-4xl text-right pr-5 "
           />
         </div>
