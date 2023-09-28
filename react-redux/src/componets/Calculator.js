@@ -1,7 +1,10 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons";
+import {useDispatch ,useSelector } from 'react-redux'
+import { Load_Ans, Load_Backpace, Load_Button, Load_Clear } from "../redux/calculator/calculatorActions";
 
 function Calculator() {
+  const dispatch = useDispatch()
   return (
     <>
       <section>
@@ -20,32 +23,32 @@ function Calculator() {
         </div>
         {/* keypad */}
         <div>
-          <button>ac</button>
-          <button>c</button>
-          <button>/</button>
+          <button onClick={() =>dispatch(Load_Clear())}>ac</button>
+          <button onClick={() => dispatch(Load_Backpace())}>c</button>
+          <button onClick={() => dispatch(Load_Button("/"))}>/</button>
           <button className="rowspan-2">+</button>
         </div>
         <div>
-          <button>9</button>
-          <button>8</button>
-          <button>7</button>
+          <button onClick={() =>dispatch(Load_Button(9))}>9</button>
+          <button onClick={() =>dispatch(Load_Button(8))}>8</button>
+          <button onClick={() =>dispatch(Load_Button(7))}>7</button>
         </div>
         <div>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>-</button>
+          <button onClick={() =>dispatch(Load_Button(4))}>4</button>
+          <button onClick={() =>dispatch(Load_Button(5))}>5</button>
+          <button onClick={() =>dispatch(Load_Button(6))}>6</button>
+          <button onClick={() => dispatch(Load_Button("-"))}>-</button>
         </div>
         <div>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>*</button>
+          <button onClick={() =>dispatch(Load_Button(1))}>1</button>
+          <button onClick={() =>dispatch(Load_Button(2))}>2</button>
+          <button onClick={() =>dispatch(Load_Button(3))}>3</button>
+          <button onClick={() =>dispatch(Load_Button("*"))}>*</button>
         </div>
         <div>
-          <button>.</button>
-          <button>0</button>
-          <button>=</button>
+          <button onClick={() =>dispatch(Load_Button("."))} >.</button>
+          <button onClick={() =>dispatch(Load_Button(0))}>0</button>
+          <button onClick={() => dispatch(Load_Ans())}>=</button>
         </div>
         
       </section>
