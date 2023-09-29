@@ -12,7 +12,6 @@ function Calculator() {
   })
   return (
     <>
-    <pre>{JSON.stringify(viewCalculator)}</pre>
       <section>
         <div className="bg-gray-900 w-96 h-screen mx-auto rounded-lg overflow-hidden mt-10"></div>
         <div className="text-gray-200 w-full font-bold text-3xl h-16 flex items-centre space-x-2 pl-2">

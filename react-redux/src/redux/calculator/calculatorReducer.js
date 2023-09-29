@@ -3,7 +3,7 @@ import { LOAD_BACKPACE,LOAD_CLEAR,LOAD_BUTTON,LOAD_ANS } from "./calculatorTypes
 export const CALCULATOR_KEY ="calculatorstore"
 let initialState = {
     number:'',
-    and:''
+    ans:''
 }
 
 export const calculatorReducer = (state=initialState,action) =>{
