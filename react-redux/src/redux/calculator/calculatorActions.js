@@ -1,16 +1,15 @@
 import { LOAD_BACKPACE,LOAD_CLEAR,LOAD_BUTTON,LOAD_ANS } from "./calculatorTypes";
 
-export const Load_Backpace = (number) =>{
+export const Load_Backpace = () =>{
     return {
         type:LOAD_BACKPACE,
-        payload:number
+        
     }
 }
 
-export const Load_Clear = (number) => {
+export const Load_Clear = () => {
     return {
         type:LOAD_CLEAR,
-        payload:number
     }
 }
 
@@ -20,9 +19,9 @@ export const Load_Button = (number) =>{
         payload:number
     }
 }
-export const Load_Ans = (number) =>{
+export const Load_Ans = () =>{
     return {
-        type:LOAD_ANS,
-        payload:number
+        type:LOAD_ANS
+        
     }
 }
