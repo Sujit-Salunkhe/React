@@ -1,5 +1,4 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons";
 import {useDispatch ,useSelector } from 'react-redux'
 import { Load_Ans, Load_Backpace, Load_Button, Load_Clear } from "../redux/calculator/calculatorActions";
 import { CALCULATOR_KEY } from "../redux/calculator/calculatorReducer";
@@ -13,7 +12,6 @@ function Calculator() {
   })
   return (
     <>
-      {/* <h1>Calculator</h1> */}
       <section className="container">
         {/* screen */}
         <div className="top">
