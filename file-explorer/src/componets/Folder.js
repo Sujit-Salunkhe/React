@@ -15,6 +15,11 @@ const Folder = ({ explorerData }) => {
     setExpand(true);
     setShow({ visible: true, isFolder });
   };
+  const addFolder = (e) => {
+    if(e.keyCode === 13 && e.target.value){
+      
+    }
+  }
   if (explorerData.isFolder) {
     return (
       <div className="main-container">
@@ -35,7 +40,7 @@ const Folder = ({ explorerData }) => {
           {show.visible && (
             <div>
               <span>{show.isFolder ? "📁" : "📄"}</span>
-              <input type="text" autoFocus className="inputbox" onBlur={()  => setShow({ ...show, visible: false })}></input>
+              <input type="text"  className="inputbox" onBlur={()  => setShow({ ...show, visible: false })}  onKeyDown={ addFolder} autoFocus />
             </div>
           )}
           {explorerData.items.map((exp) => {
