@@ -1,10 +1,12 @@
 
 
-const usetraversetree = (tree,folderId,item,isFolder) => {
+const useTraverseTree = () => {
     const  insertNode = (tree,folderId,item,isFolder) => {
+        // console.log("here")
+        console.log(tree.id,folderId)
         if(tree.id === folderId && tree.isFolder){
             tree.items.unshift({
-                id:new Date.getTime(),
+                id: new Date().getTime(),
                 name:item,
                 isFolder:isFolder,
                 items:[]
@@ -17,8 +19,21 @@ const usetraversetree = (tree,folderId,item,isFolder) => {
             return insertNode(obj,folderId,item,isFolder)
         })
         return {...tree,items: latestNode};
-    } 
-return {insertNode}
+    };
+
+    const deleteNode = (tree,folderId) =>{
+        if(tree.id === folderId){
+                return tree = null
+        }
+        else{
+            tree.items.map(val => {
+                if(val.id === folderId){
+                    return val = null
+                }
+            })
+        }
+    }
+return {insertNode,deleteNode}
 }
 
-export default usetraversetree
+export default useTraverseTree

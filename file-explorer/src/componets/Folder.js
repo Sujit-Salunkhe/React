@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import { MdDelete } from "react-icons/md";
 
-const Folder = ({ explorerData }) => {
+const Folder = ({ insertnewfolder = () => {}, explorerData }) => {
   const [expand, setExpand] = useState(false);
   const [show, setShow] = useState({
     visible: false,
     isFolder: false,
   });
   const handleDisplay = (e) => {
-    // setShow({ ...show, visible: false });
     setExpand(!expand);
   };
   const insertFolder = (e, isFolder) => {
@@ -17,8 +17,14 @@ const Folder = ({ explorerData }) => {
   };
   const addFolder = (e) => {
     if(e.keyCode === 13 && e.target.value){
-      
+      insertnewfolder(explorerData.id,e.target.value,show.isFolder)
+      setShow({
+        ...show,visible:false
+      })
     }
+  }
+  const deleteFolder = () => {
+
   }
   if (explorerData.isFolder) {
     return (
@@ -32,6 +38,9 @@ const Folder = ({ explorerData }) => {
             <button className="buttons" onClick={(e) => insertFolder(e, false)}>
               File +
             </button>
+            <button className="buttons" onClick={(e) => deleteFolder(e, false)}>
+              <MdDelete/> delete 
+            </button>
           </div>
         </div>
         <div
@@ -40,17 +49,18 @@ const Folder = ({ explorerData }) => {
           {show.visible && (
             <div>
               <span>{show.isFolder ? "📁" : "📄"}</span>
-              <input type="text"  className="inputbox" onBlur={()  => setShow({ ...show, visible: false })}  onKeyDown={ addFolder} autoFocus />
+              <input type="text"  className="inputbox" onBlur={()  => setShow({ ...show, visible: false })}  
+              onKeyDown={addFolder} autoFocus />
             </div>
           )}
           {explorerData.items.map((exp) => {
-            return <Folder key={exp.id} explorerData={exp} />;
+            return <Folder key={exp.id} explorerData={exp} insertnewfolder={insertnewfolder} />;
           })}
         </div>
       </div>
     );
   } else {
-    return <span className="file">📄 {explorerData.name}</span>;
+    return <span className="file">📄 {explorerData.name}</span>;    
   }
 };
 
