@@ -1,24 +1,35 @@
 .main-container {
   margin-top: 10px;
+  gap: 1px;
 }
-.container{
+.container {
   display: flex;
-  /* margin-left: 10px; */
   justify-content: space-between;
-  background-color:lightgray;
+  background-color: lightgray;
   width: 500px;
 }
-.file{
+
+.buttons-container {
+  display: flex
+}
+.file {
   display: flex;
-  /* margin-left: 10px; */
   justify-content: space-between;
   background-color: lightblue;
-  width: 300px;
+  width: 500px;
   margin-top: 10px;
 }
-.container > span {
-  margin: 0 5;
+.file-btns {
+  display: flex;
 }
-
-
+.det-icon {
+  margin-left: 4px;
+}
+.buttons {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
 
