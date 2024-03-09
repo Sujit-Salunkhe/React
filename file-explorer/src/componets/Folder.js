@@ -90,7 +90,7 @@ const Folder = ({
                 className="inputbox"
                 onBlur={() => setShow({ ...show, visible: false })}
                 onKeyDown={addFolder}
-                onChange={handleNameChange}
+                // onChange={handleNameChange}
                 autoFocus
               />
             </div>

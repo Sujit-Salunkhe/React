@@ -10,7 +10,8 @@
 }
 
 .buttons-container {
-  display: flex
+  display: flex;
+  align-items: center;
 }
 .file {
   display: flex;
