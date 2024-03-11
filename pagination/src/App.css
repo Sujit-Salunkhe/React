@@ -1,38 +1,64 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.title_head {
   text-align: center;
+  font-size: 3rem;
+  color: rgb(33, 33, 33);
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main__container {
+  margin: 20px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.products__container {
+  height: 250px;
+  padding: 20px;
+  background-color: rgb(220, 220, 220);
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.products__container > img {
+  height: 95%;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 3px;
+}
+
+.pagination_container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 3px;
+}
+.pagination_container > span{
+  margin: 10px;
+}
+.pagination_container > span:nth-child(odd):hover{
+  color: grey;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination_numbers{
+  border: 1px solid;
+  font-size: 20px;
+  margin: 3px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination_numbers:hover{
+  
+  background-color: grey;
 }
