@@ -5,7 +5,8 @@ import { useEffect } from "react";
 const Pagination = () => {
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(90);
+  const [page, setPage] = useState(0);
+  const [backClass, setBackClass] = useState("");
   useEffect(() => {
     axios
       .get("https://dummyjson.com/products?limit=100")
@@ -24,10 +25,16 @@ const Pagination = () => {
   const prevPage = () => {};
   const handlePages = (e, i) => {
     e.preventDefault();
-    let pageSpan  = document.getElementsByClassName('pagination_numbers')
-    pageSpan.style.backgroundColor = 'grey'
+
+    let pageSpan = document.getElementsByClassName("pagination_numbers")[i];
+    setBackClass(pageSpan);
+    if (backClass) {
+      backClass.style.backgroundColor = "";
+    }
+    pageSpan.style.backgroundColor = "grey";
     setPage(i * 10);
   };
+
   return (
     <div>
       <p className="title_head">product images</p>
