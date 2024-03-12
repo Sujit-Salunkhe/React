@@ -5,6 +5,7 @@ import { useEffect } from "react";
 const Pagination = () => {
   const [products, setProducts] = useState();
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(90);
   useEffect(() => {
     axios
       .get("https://dummyjson.com/products?limit=100")
@@ -17,15 +18,25 @@ const Pagination = () => {
         console.log(err);
       });
   }, []);
+  const nextPage = () => {
+    setPage(page + 10);
+  };
+  const prevPage = () => {};
+  const handlePages = (e, i) => {
+    e.preventDefault();
+    let pageSpan  = document.getElementsByClassName('pagination_numbers')
+    pageSpan.style.backgroundColor = 'grey'
+    setPage(i * 10);
+  };
   return (
     <div>
-        <p className="title_head">product images</p>
+      <p className="title_head">product images</p>
       {loading ? (
         "loading..."
       ) : (
         <>
           <div className="main__container">
-            {products.slice(0, 10).map((product) => (
+            {products.slice(page, page + 10).map((product) => (
               <span key={product.id} className="products__container">
                 <img
                   src={product.thumbnail}
@@ -38,13 +49,29 @@ const Pagination = () => {
           </div>
           {products.length > 0 && (
             <div className="pagination_container">
-              <span> Prev...</span>
+              <span
+                className={page === 0 ? "hidden" : ""}
+                onClick={() => prevPage()}
+              >
+                Prev...
+              </span>
               <span>
                 {[...Array(products.length / 10)].map((_, i) => (
-                  <span key={i + 1} className="pagination_numbers">{i + 1}</span>
+                  <span
+                    key={i + 1}
+                    className="pagination_numbers"
+                    onClick={(e) => handlePages(e, i)}
+                  >
+                    {i + 1}
+                  </span>
                 ))}
               </span>
-              <span>Next...</span>
+              <span
+                className={page === 90 || page === 100 ? "hidden" : ""}
+                onClick={() => nextPage()}
+              >
+                Next...
+              </span>
             </div>
           )}
         </>
