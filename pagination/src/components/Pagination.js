@@ -22,10 +22,11 @@ const Pagination = () => {
   const nextPage = () => {
     setPage(page + 10);
   };
-  const prevPage = () => {};
+  const prevPage = () => {
+    setPage(page -10)
+  };
   const handlePages = (e, i) => {
     e.preventDefault();
-
     let pageSpan = document.getElementsByClassName("pagination_numbers")[i];
     setBackClass(pageSpan);
     if (backClass) {
