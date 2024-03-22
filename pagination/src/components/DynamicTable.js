@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import "./dy.css";
 const DynamicTable = () => {
   const [row, setRow] = useState();
   const [col, setCol] = useState();
-  const [numbers, setNumbers] = useState(1);
-
   let number = 1
   const handelNumber = () => {
     //   console.log(num,'inside func')
