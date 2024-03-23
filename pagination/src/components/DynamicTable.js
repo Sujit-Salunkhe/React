@@ -12,7 +12,6 @@ const DynamicTable = () => {
   };
   return (
     <>
-      {console.log("render")}
       <div className="input_Container">
         <input
           type="text"
