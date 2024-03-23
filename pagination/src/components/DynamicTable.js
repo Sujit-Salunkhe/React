@@ -1,15 +1,18 @@
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./dy.css";
 const DynamicTable = () => {
   const [row, setRow] = useState();
   const [col, setCol] = useState();
-  let number = 1
-  const handelNumber = () => {
-    //   console.log(num,'inside func')
-        number +=1
-  }
+  const [order, setOrder] = useState("Ase");
+  let number = 0;
+
+
+  const handleNumber = () => {
+    number += 1
+  };
   return (
     <>
+      {console.log("render")}
       <div className="input_Container">
         <input
           type="text"
@@ -18,7 +21,7 @@ const DynamicTable = () => {
         />
         <input
           type="text"
-          onChange={(e) =>setCol(e.target.value)}
+          onChange={(e) => setCol(e.target.value)}
           placeholder="Col"
           className="input_con"
         />
@@ -30,7 +33,9 @@ const DynamicTable = () => {
           id="radio1"
           className="radio_input"
           name="order"
-          value="asc"
+          value="Ase"
+          checked={order === "Ase"}
+          onChange={(e) => setOrder(e.target.value)}
         />
         <label htmlFor="radio1">Ascending</label>
         <input
@@ -38,29 +43,32 @@ const DynamicTable = () => {
           id="radio2"
           className="radio_input"
           name="order"
-          value="dsc"
+          value="Des"
+          checked={order === "Des"}
+          onChange={(e) => setOrder(e.target.value)}
         />
         <label htmlFor="radio2">Descending</label>
       </div>
       <table>
-      {row && col ? (
-        <>
-        <tbody>
-            {[...Array(parseInt(row))].map(( _, i) => (
+        {row && col ? (
+          <>
+            <tbody>
+              {[...Array(parseInt(row))].map((_, i) => (
                 <tr key={i}>
-                 {[...Array(parseInt(row) * parseInt(col))].slice(0,col).map(( _, index) => (
-                    <td key={index}>
-                        {number}
-                        {handelNumber()}
-                    </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-          
-          
+                  {order === "Ase"
+                    ? [...Array(parseInt(row) * parseInt(col))]
+                        .slice(0, col)
+                        .map((_, index) => (
+                          <td key={index}>{(number = number + 1)}</td>
+                        ))
+                    : [...Array(parseInt(row) * parseInt(col))]
+                        .slice(0, col)
+                        .map((_, index) => <td key={index}>{row * col - number}{handleNumber()}</td>)}
+                </tr>
+              ))}
+            </tbody>
           </>
-      ) : null}
+        ) : null}
       </table>
     </>
   );
