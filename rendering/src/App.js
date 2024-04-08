@@ -10,7 +10,7 @@ import ParentForm from './Projects/Form/ParentForm';
 // import Imagesslider from './Projects/ImageSlider/Imagesslider';
 // import QuotePatent from './Projects/QuateGenerator/QuotePatent';
 // import Sujit from './Projects/Time/Sujit';
-
+import Courseras from './Courseras';
 function App() {
   return ( 
     <div className="App">
@@ -20,9 +20,9 @@ function App() {
         <ChildCompont/>
       </Parentcompont> */}
       {/* <Parent/> */}
-
+      <Courseras/>
       {/* <Imagesslider/> */}
-      <ParentForm/>
+      {/* <ParentForm/> */}
       {/* <Time/> */}
       {/* <Sujit/> */}
       {/* <QuotePatent/> */}

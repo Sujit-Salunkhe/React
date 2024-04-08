@@ -1,0 +1,36 @@
+.main-container {
+  margin-top: 10px;
+  gap: 1px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  width: 500px;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+}
+.file {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightblue;
+  width: 500px;
+  margin-top: 10px;
+}
+.file-btns {
+  display: flex;
+}
+.det-icon {
+  margin-left: 4px;
+}
+.buttons {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
