@@ -50,6 +50,10 @@
   cursor: pointer;
 }
 
+#FirstNumber {
+  background-color: grey;
+}
+
 .pagination_numbers {
   border: 1px solid;
   font-size: 20px;

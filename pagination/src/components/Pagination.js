@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect, Suspense, useRef } from "react";
 
 const Pagination = () => {
   const [products, setProducts] = useState();
@@ -19,15 +18,27 @@ const Pagination = () => {
         console.log(err);
       });
   }, []);
-  const nextPage = () => {
-    setPage(page + 10);
+  const nextPage = (e) => {
+    let incPage = page + 10
+    let str = String(incPage);
+    setPage(incPage);
+    handlePages(e,str[0])
   };
-  const prevPage = () => {
-    setPage(page -10)
+  const prevPage = (e) => {
+    let incPage = page - 10
+    let str = String(incPage);
+    handlePages(e,str[0])
+    setPage(incPage);
   };
   const handlePages = (e, i) => {
     e.preventDefault();
+    let firstNumber = document.getElementById("FirstNumber");
+    if (firstNumber?.id) {  
+      firstNumber.id = "";
+    };
+  
     let pageSpan = document.getElementsByClassName("pagination_numbers")[i];
+    
     setBackClass(pageSpan);
     if (backClass) {
       backClass.style.backgroundColor = "";
@@ -59,7 +70,7 @@ const Pagination = () => {
             <div className="pagination_container">
               <span
                 className={page === 0 ? "hidden" : ""}
-                onClick={() => prevPage()}
+                onClick={(e) => prevPage(e)}
               >
                 Prev...
               </span>
@@ -69,6 +80,7 @@ const Pagination = () => {
                     key={i + 1}
                     className="pagination_numbers"
                     onClick={(e) => handlePages(e, i)}
+                    id={i === 0 ? "FirstNumber" : ""}
                   >
                     {i + 1}
                   </span>
@@ -76,7 +88,7 @@ const Pagination = () => {
               </span>
               <span
                 className={page === 90 || page === 100 ? "hidden" : ""}
-                onClick={() => nextPage()}
+                onClick={(e) => nextPage(e)}
               >
                 Next...
               </span>

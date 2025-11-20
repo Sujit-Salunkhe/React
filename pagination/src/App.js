@@ -6,8 +6,8 @@ import DynamicTable from './components/DynamicTable.js';
 function App() {
   return (
     <div className="App">
-      {/* <Pagination/> */}
-      <DynamicTable/>
+      <Pagination/>
+      {/* <DynamicTable/> */}
       
     </div>
   );
